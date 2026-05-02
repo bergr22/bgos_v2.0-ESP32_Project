@@ -1,5 +1,9 @@
 // WiFi SCANNER
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 #include <WiFi.h>
 
 void runWiFiApp() {
@@ -12,7 +16,7 @@ void runWiFiApp() {
 
  
   if (!scanStarted) {
-    u8g2.drawStr(0, 35, "Aglar araniyor...");
+    u8g2.drawStr(0, 35, "Scanning networks...");
     u8g2.sendBuffer(); 
     
     
@@ -27,7 +31,7 @@ void runWiFiApp() {
 
  
   if (n == 0) {
-    u8g2.drawStr(0, 35, "Ag bulunamadi!");
+    u8g2.drawStr(0, 35, "network not found!");
   } else {
     
     for (int i = 0; i < min(n, 4); i++) {

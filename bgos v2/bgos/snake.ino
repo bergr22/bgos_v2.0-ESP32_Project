@@ -1,5 +1,9 @@
 // SNAKE APP
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 #define DIR_RIGHT 0
 #define DIR_UP    1
 #define DIR_LEFT  2

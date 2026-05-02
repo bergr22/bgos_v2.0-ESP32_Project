@@ -1,5 +1,9 @@
 // NETWORK APP
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 #include <WiFi.h>
 
 void runNetworkWiFi() {
@@ -51,7 +55,7 @@ void runNetworkWiFi() {
 
             if (isApActive) {
                 // ESP32'yi Access Point moduna al ve ağı başlat
-                WiFi.softAP("sinop"); 
+                WiFi.softAP("ESP32_Wi-Fi"); 
             } else {
                 // agı uyut
                 WiFi.softAPdisconnect(true); 

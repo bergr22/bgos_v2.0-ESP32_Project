@@ -1,5 +1,9 @@
 // TETRIS APP
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 // --- tetris.ino ---
 // bgOS Tetris Entegrasyonu - Düzenlenmiş ve Stabil Versiyon
 

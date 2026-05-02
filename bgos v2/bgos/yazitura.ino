@@ -1,4 +1,8 @@
-// COIN FLIP (Yazi Tura) 
+// COIN FLIP (Yazi Tura) "heads or tails"
+
+/****************************************
+this project made by @bergrfpv 
+****************************************/
 
 #include <Arduino.h>
 #include <U8g2lib.h>

@@ -1,5 +1,9 @@
 // APPS
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 // APPS.ino - Uygulama Fonksiyonları
 #include <Adafruit_NeoPixel.h>
 #include <WiFi.h>
@@ -103,8 +107,8 @@ void runBuzzerApp() {
 
   // Durum Yazıları ve RGB Efekti
   if (ledAcik) {
-    u8g2.drawStr(10, 35, "RGB LED: AKTIF");
-    u8g2.drawStr(10, 48, "Mod: Yavas Gecis");
+    u8g2.drawStr(10, 35, "RGB LED: ACTIVE");
+    u8g2.drawStr(10, 48, "Mod: slow fade");
     
     float h = millis() / 20.0; 
     int r = sin(h * 0.02) * 127 + 128;
@@ -113,8 +117,8 @@ void runBuzzerApp() {
     pixel.setPixelColor(0, pixel.Color(r, g, b));
     pixel.show();
   } else {
-    u8g2.drawStr(10, 35, "RGB LED: KAPALI");
-    u8g2.drawStr(10, 48, "[SEL] x2 Bas -> LED");
+    u8g2.drawStr(10, 35, "RGB LED: OFF");
+    u8g2.drawStr(10, 48, "[SEL] x2 Press -> LED");
   }
   
   // Alt Bilgi Satırı

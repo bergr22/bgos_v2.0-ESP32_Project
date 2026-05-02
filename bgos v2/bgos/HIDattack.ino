@@ -1,5 +1,9 @@
 // HID ATTACK APP 
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 #include <Arduino.h>
 #include <BleKeyboard.h>
 

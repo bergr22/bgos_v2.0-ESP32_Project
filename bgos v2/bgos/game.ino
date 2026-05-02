@@ -1,5 +1,9 @@
 // PONG APP
 
+/****************************************
+this project made by @bergrfpv 
+****************************************/
+
 // game.ino - Pong Uygulaması
 #include <Arduino.h>
 
@@ -32,8 +36,8 @@ void runPongApp() {
     u8g2.drawStr(35, 12, "Ping-Pong");
     u8g2.drawLine(0, 15, 128, 15);
     u8g2.drawStr(10, 28, "[UP]  -> Normal");
-    u8g2.drawStr(10, 42, "[DWN] -> HIZLI");
-    u8g2.drawStr(10, 56, "[SEL] -> OC MODU");
+    u8g2.drawStr(10, 42, "[DWN] -> FAST");
+    u8g2.drawStr(10, 56, "[SEL] -> OC MOD");
 
     if (!digitalRead(btnUp)) {
       secilenMod = 1; zorlukHizi = 1.5;
@@ -56,8 +60,8 @@ void runPongApp() {
   // --- DURUM 2: GAME OVER ---
   if (oyunDurumu == 2) {
     u8g2.setFont(u8g2_font_7x14_tf);
-    int mesajX = (128 - u8g2.getStrWidth("kaybettun aminagom")) / 2;
-    u8g2.drawStr(mesajX, 28, "kaybettun aminagom");
+    int mesajX = (128 - u8g2.getStrWidth("game over")) / 2;
+    u8g2.drawStr(mesajX, 28, "game over");
     
     u8g2.setFont(u8g2_font_6x10_tf);
     char finalSkor[15];
@@ -65,8 +69,8 @@ void runPongApp() {
     int skorX = (128 - u8g2.getStrWidth(finalSkor)) / 2;
     u8g2.drawStr(skorX, 45, finalSkor);
     
-    int deneX = (128 - u8g2.getStrWidth("[sel] gel dene bida")) / 2;
-    u8g2.drawStr(deneX, 60, "[sel] gel dene bida");
+    int deneX = (128 - u8g2.getStrWidth("[sel] try again")) / 2;
+    u8g2.drawStr(deneX, 60, "[sel] try again");
 
     if (!digitalRead(btnSelect)) {
       oyunDurumu = 0;
